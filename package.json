@@ -1,0 +1,29 @@
+{
+  "name": "smart-agg-fs-writer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stierma1/smart-agg-fs-writer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stierma1/smart-agg-fs-writer/issues"
+  },
+  "homepage": "https://github.com/stierma1/smart-agg-fs-writer#readme",
+  "dependencies": {
+    "bluebird": "^2.10.1"
+  },
+  "devDependencies": {
+    "chai": "^3.3.0",
+    "grunt": "^0.4.5",
+    "grunt-mocha-istanbul": "^3.0.1",
+    "istanbul": "^0.3.21",
+    "mocha": "^2.3.3"
+  }
+}
