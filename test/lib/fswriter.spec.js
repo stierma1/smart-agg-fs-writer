@@ -37,7 +37,7 @@ describe("#FsWriter", function(){
   it("should writefile", function(done){
     var writer = new FsWriter({id:"test", dirname: __dirname});
     writer.addTo(app);
-    writer.client.emit("invoke-rule", {predicate:"write(FileName, Mode)", groundings:["test.txt", "overwrite"], payload:"hello world"});
+    writer.client.emit("invoke-rule", {predicate:"write(FileName, Mode)", groundings:["test.txt", "overwrite"], payloads:"hello world"});
     setTimeout(function(){
       if(fs.readFileSync(__dirname + "/test.txt", "utf8") === "hello world"){
         done();
@@ -51,7 +51,7 @@ describe("#FsWriter", function(){
   it("should transform writefile", function(done){
     var writer = new FsWriter({id:"test", dirname: __dirname, transforms:{"bacon" : function(){return "bacon";}}});
     writer.addTo(app);
-    writer.client.emit("invoke-rule", {predicate:"write(FileName, Mode, Transform)", groundings:["test1.txt", "overwrite", "bacon"], payload:"hello world"});
+    writer.client.emit("invoke-rule", {predicate:"write(FileName, Mode, Transform)", groundings:["test1.txt", "overwrite", "bacon"], payloads:"hello world"});
     setTimeout(function(){
       if(fs.readFileSync(__dirname + "/test1.txt", "utf8") === "bacon"){
         done();
